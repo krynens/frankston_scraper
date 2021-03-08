@@ -22,7 +22,7 @@ for row in rows do
   date_received = row.search('td')[3].text.strip
   description = row.search('td')[2].text.strip
   
-  puts date_received
+  puts DateTime.strptime(date_received, '%d/%m/%Y').strftime('%Y-%m-%d')
   
 #   record = {
 #     "address" => row.search('td')[1].text + ', ' + suburb,
