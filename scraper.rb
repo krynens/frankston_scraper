@@ -21,7 +21,7 @@ for row in rows do
   council_reference = row.search('td')[0].text.strip
   description = row.search('td')[2].text.strip
   
-  puts council_reference
+  puts description
 #   record = {
 #     "address" => row.search('td')[1].text + ', ' + suburb,
 #     "council_reference" => row.search('td')[0].text.strip,
