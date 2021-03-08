@@ -15,10 +15,9 @@ form.radiobuttons[0].click
 page = agent.submit(form, form.buttons[2])
 table = page.search('table.ContentPanel')
 rows = table.search('tr.ContentPanel', 'tr.AlternateContentPanel')
-print(rows)
 
-# for row in rows do
-#   suburb = row.search('td')[2].text.strip
+for row in rows do
+  address = row.search('td')[1].text.strip
 #   record = {
 #     "address" => row.search('td')[1].text + ', ' + suburb,
 #     "council_reference" => row.search('td')[0].text.strip,
@@ -29,4 +28,4 @@ print(rows)
   
 #   ScraperWiki.save_sqlite(['council_reference'], record)
   
-# end
+end
