@@ -18,6 +18,7 @@ rows = table.search('tr.ContentPanel', 'tr.AlternateContentPanel')
 
 for row in rows do
   address = row.search('td')[1].text.strip
+  puts address
 #   record = {
 #     "address" => row.search('td')[1].text + ', ' + suburb,
 #     "council_reference" => row.search('td')[0].text.strip,
