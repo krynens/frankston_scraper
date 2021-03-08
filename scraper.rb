@@ -21,8 +21,8 @@ for row in rows do
   council_reference = row.search('td')[0].text.strip
   date_received = row.search('td')[3].text.strip
   description = row.search('td')[2].text.strip
-  
-  puts DateTime.strptime(date_received, '%d/%m/%Y').strftime('%Y-%m-%d')
+  info_url = row.search('a')
+  puts info_url
   
 #   record = {
 #     "address" => row.search('td')[1].text + ', ' + suburb,
