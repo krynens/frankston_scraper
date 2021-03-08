@@ -21,7 +21,7 @@ for row in rows do
   council_reference = row.search('td')[0].text.strip
   date_received = row.search('td')[3].text.strip
   description = row.search('td')[2].text.strip
-  info_url = row.search('a').to_s.split('"')[3]
+  info_url = 'https://epathway.frankston.vic.gov.au/ePathway/Production/Web/GeneralEnquiry/' + row.search('a').to_s.split('"')[3]
   puts info_url
   
 #   record = {
